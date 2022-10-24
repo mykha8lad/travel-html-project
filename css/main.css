@@ -36,8 +36,15 @@ body {
 
 .header {
     position: relative;
-    min-height: 940px; /* для помещения других элементов */ 
+    min-height: 940px; /* для помещения других элементов */
+    padding-top: 44px;
+    
     background: linear-gradient(132.05deg, #428E5F -17.38%, #112120 78.4%), #204434;
+    color: #fff;
+}
+
+.header a {
+    color: #fff;
 }
 
 .header::after {
@@ -50,4 +57,86 @@ body {
 
     background-image: url(./../img/header/header-bottom.svg);
     background-size: 100%;
+}
+
+.header__top {
+    margin-bottom: 86px;
+}
+
+.header__content {
+    max-width: 592px;
+}
+
+/* Nav */
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 80px; /* для адаптива, чтобы элементы плотно не подходили друг к другу */
+}
+
+.nav__list {
+    display: flex;
+    column-gap: 80px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.nav__list a {
+    position: relative;
+}
+
+.nav__list a.active::after,
+.nav__list a:hover::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    right: 10px;
+    bottom: -6px;
+
+    display: block;
+    /* width: 35px; */
+    height: 4px;
+    background-color: #c4c4c4;
+    border-radius: 50px;
+}
+
+.nav__login {
+    display: flex;
+    column-gap: 25px;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/* Logo */
+
+.logo a{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* Button */
+
+.btn {
+    display: inline-block;
+    padding: 13px 44px;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    background: linear-gradient(129.54deg, #FF7B4E 15.57%, #e02920 95.03%), #FFFFFF;
+    border-radius: 100px;
+}
+
+.btn:hover {
+    color: darkgoldenrod;
+    transition: color 0.3s ease-in;
+}
+
+.btn:active {
+    position: relative;
+    top: 1px;
 }
