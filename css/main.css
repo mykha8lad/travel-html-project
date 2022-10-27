@@ -29,7 +29,7 @@ body {
 /*  */
 .block {
     height: 200px;
-    background-color: darkolivegreen;
+    background-color: rgb(57, 26, 141);
 }
 
 /* Header */
@@ -103,6 +103,7 @@ body {
     column-gap: 80px;
     font-size: 15px;
     font-weight: 500;
+    z-index: 2;
 }
 
 .nav__list a {
@@ -131,6 +132,7 @@ body {
     align-items: center;
     font-size: 15px;
     font-weight: 500;
+    z-index: 2;
 }
 
 /* Logo */
@@ -209,4 +211,121 @@ body {
 .header__btn:active {
     position: relative;
     top: 1px;
+}
+
+/* Destinations */
+
+.destinations {
+    padding: 96px 0 100px;
+    overflow-x: hidden;
+}
+
+.destinations__row {
+    display: flex;
+    column-gap: 50px;
+}
+
+.destinations__content {
+    max-width: 456px;
+}
+
+.destionations__slider {
+    width: 1110px;
+    flex-shrink: 0;
+}
+
+.destinations__title {
+    margin-bottom: 15px;
+    font-size: 55px;
+    font-weight: 600;
+}
+
+.destinations__title span {
+    font-size: 30px;
+}
+
+.destinations__text {
+    margin-bottom: 60px;
+    font-size: 25px;
+    font-weight: 500;
+    color: var(--secondary);
+}
+
+.btn {
+    display: inline-block; 
+    padding: 25px 45px;
+
+    background: linear-gradient(129.54deg, #FF7B4E 15.57%, #FF584E 95.03%);
+    border-radius: 27px;
+
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.btn:hover {
+    color: darkgoldenrod;
+    transition: color 0.3s ease-in;
+}
+
+.btn:active {
+    position: relative;
+    top: 1px;
+}
+
+/* Slider */
+
+.slider {
+    position: relative;
+    height: 456px;
+}
+
+.slider__item {
+    margin-top: 27px;
+
+    width: 335px;
+    height: 402px;
+    object-fit: cover;
+    border-radius: 35px;
+
+    transition: .2s ease-in;
+}
+
+.slider .center .slider__item {
+    margin-top: 0;
+
+    width: 380px;
+    height: 456px;
+}
+
+.slider__btn {
+    display: block;
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 9;
+
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+
+    background: linear-gradient(129.54deg, #FF7B4E 15.57%, #FF584E 95.03%), #8B8B8B;
+}
+
+.slider__btn--prev {
+    left: -27px;
+
+    padding-left: 26px;
+    justify-content: flex-start;
+}
+
+.slider__btn--next {
+    right: -27px;
+
+    padding-right: 26px;
+    justify-content: flex-end;
 }
